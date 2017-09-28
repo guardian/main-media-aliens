@@ -21,30 +21,59 @@
 
 .alien__headline {
     position: absolute;
-    top: 0;
-    left: 0;
     background-color: $c-white;
     color: $c-black;
     font-family: 'Guardian Egyptian Web';
-    font-size: 54px;
+    font-size: 4vw;
     line-height: 1;
-    padding: 18px 14px;
+    padding: 2vw 1.7vw;
     display: inline-block;
     white-space: nowrap;
+
+    @include mq(desktop) {
+        font-size: 48px;
+        padding: 18px 14px;
+    }
 }
 
 .alien__headline--1 {
     background-color: $c-black;
     color: $c-yellow;
     transform: rotate(-3deg);
-    top: 140px;
-    left: -210px;
+    top: 22%;
+    left: -35px;
+
+    @include mq(desktop) {
+        top: 120px;
+        left: -70px;
+    }
+
+    @include mq(leftCol) {
+        left: -140px;
+    }
+
+    @include mq(wide) {
+        left: -200px;
+    }
 }
 
 .alien__headline--2 {
-    top: 260px;
-    left: 400px;
+    top: 50%;
+    right: -30px;
     transform: rotate(2deg);
+
+    @include mq(desktop) {
+        right: -80px;
+        top: 260px;
+    }
+
+    @include mq(leftCol) {
+        right: -140px;
+    }
+
+    @include mq(wide) {
+        right: -200px;
+    }
 }
 
 .alien__byline {
@@ -52,18 +81,29 @@
     color: $c-black;
     font-weight: bold;
     font-family: 'Guardian Egyptian Web';
-    font-size: 24px;
+    font-size: 16px;
     line-height: 1;
-    padding: 12px 10px;
+    padding: 8px 6px;
     display: inline-block;
     position: absolute;
     bottom: -24px;
     transform: rotate(-2deg);
-    right: 100px;
+    right: 20px;
+
+    @include mq(desktop) {
+        font-size: 24px;
+        padding: 12px 10px;
+        right: 100px;
+    }
 }
 
 .alien__image {
+    width: 80vw;
     max-width: 100%;
     margin: 0 auto;
     display: block;
+
+    @include mq(desktop) {
+        width: auto;
+    }
 }
