@@ -5,3 +5,44 @@ body, html {
 //     overflow: hidden;
 //     background-color: $c-yellow;
 }
+
+.gs-container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 10px;
+    height: 100%;
+}
+
+@include mq(mobileLandscape) {
+    .gs-container {
+        padding: 0 20px;
+    }
+}
+
+@include mq(tablet) {
+    .gs-container {
+        max-width: 740px;
+    }
+}
+
+@include mq(desktop) {
+    .gs-container {
+        max-width: 980px;
+    }
+}
+
+@include mq(leftCol) {
+    .gs-container {
+        max-width: 1140px;
+    }
+}
+
+@include mq(wide) {
+    .gs-container {
+        max-width: 1300px;
+    }
+}
+
+.l-side-margins:after, .l-side-margins:before {
+    z-index: 30;
+}

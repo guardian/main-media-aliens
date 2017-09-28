@@ -1,55 +1,69 @@
-@font-face {
-    font-family: 'Guardian Egyptian Condensed';
-    src: url('@@assetPath@@/assets/fonts/condmed.woff2') format('woff2'),
-         url('@@assetPath@@/assets/fonts/condmed.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.road {
+.alien {
+    background-color: $c-black;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 9999;
+    z-index: 10000;
+}
+
+.alien__flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.alien__content {
+    position: relative;
+}
+
+.alien__headline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $c-white;
+    color: $c-black;
+    font-family: 'Guardian Egyptian Web';
+    font-size: 54px;
+    line-height: 1;
+    padding: 18px 14px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.alien__headline--1 {
+    background-color: $c-black;
+    color: $c-yellow;
+    transform: rotate(-3deg);
+    top: 140px;
+    left: -210px;
+}
+
+.alien__headline--2 {
+    top: 260px;
+    left: 400px;
+    transform: rotate(2deg);
+}
+
+.alien__byline {
     background-color: $c-yellow;
+    color: $c-black;
+    font-weight: bold;
+    font-family: 'Guardian Egyptian Web';
+    font-size: 24px;
+    line-height: 1;
+    padding: 12px 10px;
+    display: inline-block;
+    position: absolute;
+    bottom: -24px;
+    transform: rotate(-2deg);
+    right: 100px;
 }
 
-.road__photo {
-    position: fixed;
-    top: 45vh;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    background-image: url('@@assetPath@@/assets/images/photo.png');
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-}
-
-.road__diamonds {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 30vh;
-    background-repeat: no-repeat;
-
-        background-image: url('@@assetPath@@/assets/images/diamonds--mobile.svg');
-        background-size: cover;
-        background-position: center bottom;
-    
-
-    @include mq(tablet) {
-        background-size: 160vw 132vh;
-        background-position: center bottom -34vh;
-        background-image: url('@@assetPath@@/assets/images/diamonds.svg');
-    }
-}
-
-.road__headline,
-.road__standfirst {
-    display: none;
+.alien__image {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
 }
